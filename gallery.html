@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galerija</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/galerija.css" rel="stylesheet">
+	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script  src="js/jquery-3.2.1.js"></script>
+	<script src="js/galleria-1.5.7.min"></script>
+    
+
+    <script>
+      function newsletter(){
+
+          var email = document.getElementById('mejl');
+    	  var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    	  if (!filter.test(email.value)) {
+   	          alert('Ukucajte ispravnu email adresu');
+    	      email.focus();
+    	      return false;
+	      }
+	      
+	      alert('Uspešno ste se prijavili');
+          return true;
+      }
+    </script>
+
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html">Prodaja automobila</a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+		  <ul class="nav navbar-nav">
+
+            <li><a href="index.html">Pocetna</a></li>
+            <li class="active"><a href="about.html">O nama</a></li>
+            <li><a href="form.html">Narucivanje</a></li>
+            <li><a href="gallery.html">Galerija polovnih automobila</a></li>
+
+            
+			<li>
+			  <form class="navbar-form navbar-left">
+				<div class="form-group">
+				  
+				  <input type="email" id="mejl" class="form-control" placeholder="Email">
+				</div>
+				<button type="submit" class="btn btn-info" onClick="newsletter()">Prijavite se za newsletter</button>
+			</form></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+    <br>
+    <br>
+    <br>
+
+    <div>
+	  <h1>GALERIJA</h1>
+	  <br>
+    </div>
+	
+    <section id="prvired">
+      
+	  <div class="container">
+		<div class="row">
+		  
+		  <div class="col-sm-4" style="margin-left: 315px" >
+			
+</a>
+
+<img src="img/1.jpg" class="slike"></a>
+<img src="img/3.jpg" class="slike"></a>
+<img src="img/5.jpg" class="slike"></a>
+<img src="img/7.jpg" class="slike"></a>
+
+
+</div>
+<div class="col-sm-4" style="margin-left: -140px">
+  
+  <img src="img/2.png" class="slike"></a>
+<img src="img/4.jpg" class="slike"></a>
+<img src="img/6.jpg" class="slike"></a>
+<img src="img/8.jpg" class="slike"></a>
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section><br><br><br></section>
+
+<section id="oledu" >
+  <div class="container" style=" height: 350px; width: 450px;">
+	<div class="row">
+	  <div class="col-md-2">
+	  </div>
+	  <div class="col-md-7">
+		<h3 style="color:#888; font-weight: bold;">Polovna vozila za prodaju / trenutno na stanju</h3>
+	    <table class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th>Vozila u ponudi:</th>
+	          <th>Cena u evrima:</th>
+	        </tr>
+	      </thead>
+          
+	      <tbody>
+	        <tr>
+	          <td>Golf 3 (1997)</td>
+	          <td>300</td>
+	        </tr>
+            
+	        <tr>
+	          <td>Renault Scenic 2 (2004)</td>
+	          <td>1500</td>
+	        </tr>
+            
+	        <tr>
+	          <td>Opel Astra (2012)</td>
+	          <td>1800</td>
+	        </tr>
+            
+	        <tr>
+	          <td>Fiat Punto (2008)</td>
+	          <td>450</td>
+	        </tr>
+          </tbody>
+        </table>
+	  </div>
+	  <div class="col-md-2">
+	  </div>
+	</div>
+  </div>
+</section>
+<section><br><br><br></section>
+
+
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-xs-12">
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+body{
+    background-image: url("../img/background.jpg");
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+}
+
+.glavni{
+	padding: 40px 0px 0px 0px;
+	width: 1100px;
+	border: white;
+	margin:30px auto;
+ 	background-image: url("../img/background.jpg");
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	
+
+}
+
+
+
+#pomerajuci{
+	font-family: Impact; 
+	font-size: 25pt;
+}
+
+
+
+
+
+
+h2{
+	font-weight:bold;
+	
+}
+
+footer{
+	padding: 0px 10px 0px 0px;
+	background-color:#444;
+	color: rgb(80, 80, 188);
+}
+
+#slova{
+	padding: 10px 0px 0px 0px;
+	margin:30px auto;
+	width: 350px;	
+}
+
+#container{
+	width: 350px;
+	height: 100%;
+	margin: 30px auto;
+}
+#header{
+	
+	width: 800px;
+	height: 50px;
+	margin: 10px 0 15px 0;
+}
+
+
+#nav_container ul li {
+	display:inline;
+	float: left;
+	position: relative;
+	vertical-align: middle;
+	list-style: none;
+
+}
+
+#nav_container ul li a{
+	background #222;
+	color: rgb(250, 58, 58);
+	padding: 10px 65px;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+
+}
+#nav_container ul li ul {
+	display: none;
+	position: absolute;
+}
+
+#nav_container ul ul li {
+	display: block;
+
+}
+#nav_container ul li:hover ul {
+	display: block;
+	position: auto;
+
+}
+#nav_container ul li:hover ul li {
+	display: block;
+	position: auto;
+
+}
+
+#nav_container ul li a:hover{
+	background: rgb(0, 255, 0);
+	color: #222;	
+}
+
+
+
+h1{
+	font: Gill Sans MT;
+	font-size: 35px;
+	text-align: center;
+	color: #fff;
+}
+
+
+#slider {
+	width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin-left: 0px;
+	margin-right: 0px;
+	margin:auto;
+	border-radius: 80%;
+	
+}
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 4000px;
+    margin: 0;
+    padding: 0;
+
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 400px;
+    height: 300px;
+}
+
+.slider{ 
+    width:400px;
+    height:300px;
+    overflow: hidden;
+    margin:30px auto;
+    background-image:url(img/gif.gif);
+    background-repeat:no-repeat;
+    background-position: center;
+
+}
+.slider img{
+
+    width: 350px;
+    height: 200px;
+    display: none;
+}
+.feature-box {
+	margin: 0% auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+	width: 550px;
+	transition: transform .3s; 
+}
+
+.feature-box:hover {
+	transform: translateY(-1.5rem) scale(1.03); 
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	font-weight: 700;
+	display: inline-block;
+	background-image: linear-gradient(to right, #C3073F, #6F2232);
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: .2rem;
+	text-align: center;
+	width: 100%;
+	transition: all .2s;
+}
+#mapa{
+	text-margin: 50% auto;
+};
+

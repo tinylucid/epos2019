@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<title>Porucivanje</title>
+	
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/forma.css" rel="stylesheet">
+	
+    <script>
+
+      function CustomAlert(){
+          this.render = function(dialog){
+              var winW = window.innerWidth;
+              var winH = window.innerHeight;
+              var dialogoverlay = document.getElementById('dialogoverlay');
+              var dialogbox = document.getElementById('dialogbox');
+              dialogoverlay.style.display = "block";
+              dialogoverlay.style.height = winH+"px";
+              dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+              dialogbox.style.top = "100px";
+              dialogbox.style.display = "block";
+              document.getElementById('dialogboxhead').innerHTML = "Greska!";
+              document.getElementById('dialogboxbody').innerHTML = dialog;
+              document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+          }
+	      this.ok = function(){
+		      document.getElementById('dialogbox').style.display = "none";
+		      document.getElementById('dialogoverlay').style.display = "none";
+	      }
+      }
+      var Alert = new CustomAlert();
+      </script>
+
+    <script>
+      function validateEmail(){
+ 	      var email = document.getElementById('mejl');
+    	  var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    	  if (!filter.test(email.value)) {
+   	          Alert.render('Ukucajte ispravnu email adresu');
+    	      email.focus();
+    	      return false;
+	      }
+
+	      
+	      return true;
+      }
+
+      function validateBroj(){
+ 	      var telefon = document.getElementById('broj');
+    	  var filter = /([^\d\+]|^|>)((((\+|00)(\d\d)\s*(\(0\))?)|0)(\s*\d){7,10})([^\d\+]|$|<)/gi;
+
+    	  if (!filter.test(telefon.value)) {
+   	          Alert.render('Ukucajte ispravan broj telefona');
+    	      telefon.focus();
+    	      return false;
+	      }
+
+	      
+	      return true;
+      }
+      </script>
+    <script>
+
+      function validateForm(){
+
+	      var email = document.getElementById('mejl');
+    	  var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    	  if (!filter.test(email.value)) {
+   	          Alert.render('Ukucajte ispravnu email adresu');
+    	      email.focus();
+    	      return false;
+	      }
+	      
+	      
+	      var telefon = document.getElementById('broj');
+    	  var filter = /([^\d\+]|^|>)((((\+|00)(\d\d)\s*(\(0\))?)|0)(\s*\d){7,10})([^\d\+]|$|<)/gi;
+
+    	  if (!filter.test(telefon.value)) {
+   	          Alert.render('Ukucajte ispravan broj telefona');
+    	      telefon.focus();
+    	      return false;
+	      }
+
+	      
+	      return true;
+	      
+      }
+      </script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Prodaja automobila</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+                        <li><a href="index.html">Pocetna</a></li>
+            <li class="active"><a href="about.html">O nama</a></li>
+            <li><a href="form.html">Narucivanje</a></li>
+            <li><a href="gallery.html">Galerija polovnih automobila</a></li>
+
+            <br>
+            <br>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+      <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxfoot"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+	    <br>
+	    <br>
+	    <h1>Porudzbenica za vozilo:</h1>
+	    <br>
+	    
+	    
+        <form name="forma" action="success.html" method="post" onSubmit="return validateForm()">
+          <p>
+            <label for="imePrezime">Ime i prezime:</label>
+            <input type="text" name="imePrezime" id="imePrezime"/ autofocus>
+          </p><p>
+            <label for="mail">E-mail adresa:</label>
+            <input type="text" id="mejl" name="mail" size="35"/>
+          </p><p>
+            <label for="telefon">Broj telefona:</label>
+            <input type="text" id="broj" name="telefon" size="35"/>
+          </p><p>
+		    <br>
+            <label for="vrsta">Koje vozilo zelite da narucite</label>
+            <br>
+
+
+            <input type="radio" name="vrsta" value="golf" checked/> Golf 3
+            <br>
+            <input type="radio" name="vrsta" value="scenic"/> Renault Scenic 2
+            <br>
+            <input type="radio" name="vrsta" value="astra"/> Opel Astra
+            <br>
+            <input type="radio" name="vrsta" value="punto"/> Fiat Punto
+          </p><p>
+
+            <textarea class="col-md-7" id="poruka" placeholder="Unesite napomenu..." form="kontaktForma" style="height:75px; width:350px;"></textarea>
+            <br>
+            <label for="kolicina">Dodatne usluge:</label></br>
+            <input type="radio" name="placanje" value="saReg" checked/> Sa registracijom i dostavom vozila na kucnu adresu </br>
+            <input type="radio" name="placanje" value="samoDostava"/> Bez registracije vozila samo sa dostavom </br>
+            <input type="radio" name="placanje" value="nista"/> Bez dodatnih usluga
+          </p><p>
+            <input type="submit" value="Naruci" name="posalji"/> 
+            <input type="reset" value="Otkazi" name="reset"/>
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+      </div>
+      <div class="col-md-4">
+	    
+      </div>	
+
+      <footer>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-5 col-xs-12">
+
+              </div>
+            </div>
+        </nav>
+      </footer>	
+  </body>
+</html>

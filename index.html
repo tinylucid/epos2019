@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prodaja automobila</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <script  src="js/jquery-3.2.1.js"></script>
+    <script src="js/galleria-1.5.7.min"></script>
+    <script src="js/typed.min.js"></script>
+
+    <script>
+      document.oncontextmenu = function() { return false;}
+    </script>
+
+
+    <script>
+      $(function() {
+
+          
+          var width = 400;
+          var animationSpeed = 5000;
+          var pause = 0;
+          var currentSlide = 0;
+
+          var $slider = $('#slider');
+          var $slideContainer = $('.slides', $slider);
+          var $slides = $('.slide', $slider);
+
+          var interval;
+
+          function startSlider() {
+              interval = setInterval(function() {
+                  $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                      if (++currentSlide === $slides.length) {
+                          currentSlide = 1;
+                          $slideContainer.css('margin-left', 0);
+                      }
+                  });
+              }, pause);
+          }
+          function pauseSlider() {
+              clearInterval(interval);
+          }
+
+          $slideContainer
+              .on('mouseenter', pauseSlider)
+              .on('mouseleave', startSlider);
+
+          startSlider();
+
+
+      });
+
+      function newsletter(){
+
+          var email = document.getElementById('mejl');
+    	  var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    	  if (!filter.test(email.value)) {
+   	          alert('Ukucajte ispravnu email adresu');
+    	      email.focus();
+    	      return false;
+	      }
+	      
+	      alert('Uspešno ste se prijavili');
+          return true;
+      }
+    </script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Prodaja automobila</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+            <li><a href="index.html">Pocetna</a></li>
+            <li class="active"><a href="about.html">O nama</a></li>
+            <li><a href="form.html">Narucivanje</a></li>
+            <li><a href="gallery.html">Galerija polovnih automobila</a></li>
+
+            <li>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+	              
+                  <input type="email" id="mejl" class="form-control" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-info" onClick="newsletter()">Prijavite se za newsletter!</button>
+            </form></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+          <img src="img/logo.png" style="width:45%; margin-top: 60px; margin-left: 27%" ></a>
+    <section>
+      <div id="nav_container">
+        <div class="glavni">
+          <div id="slider" style="width:30%;">
+            <ul class="slides">
+              <img src="img/slider/1.jpg" class="slide"> <img src="img/slider/2.jpg" class="slide">  <img src="img/slider/3.jpg" class="slide"> <img src="img/slider/4.jpg" class="slide"> <img src="img/slider/5.jpg" class="slide">
+            </ul>
+          </div>
+          <script>
+            Galleria.loadTheme('galleria\galleria\themes\classic\galleria.classic.min.js');
+            Galleria.run('#slider');
+          </script>
+          
+        </div>
+      </div>
+    </section>
+
+    <div>
+
+<br>
+<p align="middle">
+  <a href="https://www.facebook.com/"> <img src='img/fb.png' onmouseover="this.src='img/fbhover.png';" onmouseout="this.src='img/fb.png';"  /></a>
+  <a href="https://www.instagram.com/">    <img src='img/ig.png' onmouseover="this.src='img/ighover.png';" onmouseout="this.src='img/ig.png';" /></a>
+  <a href="https://www.twitter.com/"> <img src='img/tw.png' onmouseover="this.src='img/twhover.png';" onmouseout="this.src='img/tw.png';" /></a>
+</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+      
+    </div>
+    
+    <div class="col-md-5">
+      
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-1">
+      
+    </div>
+    
+    <div class="col-md-4">
+
+      <div id="mapa" class="map-container img-box" style="height: 400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45303.58907569459!2d20.472313141437198!3d44.791521399140876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a4f80e9b89d%3A0x488cc397b9a125d7!2zVmnFoW5qacSNa2EgMTExLCBCZW9ncmFkLCBTZXJiaWE!5e0!3m2!1sen!2sus!4v1574594299846!5m2!1sen!2sus" width="400" height="400" frameborder="0" style="margin-left: 120px"></iframe>
+      </div>
+    </div>
+
+    <div class="col-md-5" >
+
+      <p id="adresa" style="margin-left: 150px; padding: 10px; border: 2px solid #000; background: #aaf;">Prodaja polovnih automobila
+        <br>
+        Beograd, Visnjicki put 111
+        <br>
+        Tel: +381 62 9114 770
+        <br>
+        Fax: +381 11 3424 899
+        <br>
+        E-mail: autobg011@gmail.com
+      </p> 
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+<br><br>
+<section>
+  <br>
+</section>
+
+<section>
+  <br><br><br>
+</section>
+<footer>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom" style="background-color: rgb(47, 178, 178);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-xs-12">
+          <div class="alert alert-info alert-dismissible" role="alert" style="margin-left: -95%; background-color: rgb(47, 178, 178); border: 0px" >
+            <marquee onMouseOver="this.stop()" onMouseOut="this.start()"  DIRECTION=RIGHT BEHAVIOR=ALTERNATE  HEIGHT=30pt ><p style="font-family: Impact;   font-size: 20pt;"><a href="form.html">PORUCITE ODMAH!</a></p></marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>
+</body>
+</html>
